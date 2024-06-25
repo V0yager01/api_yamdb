@@ -59,16 +59,7 @@ TEMPLATES = [
     },
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
-
 WSGI_APPLICATION = 'api_yamdb.wsgi.application'
-
-
-# Database
 
 DATABASES = {
     'default': {
@@ -77,8 +68,6 @@ DATABASES = {
     }
 }
 
-
-# Password validation
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -95,8 +84,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
 
 LANGUAGE_CODE = 'en-us'
 
@@ -131,14 +118,9 @@ AUTH_USER_MODEL = 'user.User'
 SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",), }
 
-# Static files (CSS, JavaScript, Images)
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = ((BASE_DIR / 'static/'),)
-
-SIMPLE_JWT = {
-    "AUTH_HEADER_TYPES": ("Bearer",), }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
